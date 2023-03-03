@@ -4,8 +4,8 @@
  * and open the template in the editor.
  */
 
-function recupMontantImposition(montant){
-    const tranche1 = 0;
+function recupMontantImposition(revenu){
+
     const tranche2 = 0.11;
     const tranche3 = 0.3;
     const tranche4 = 0.41;
@@ -21,15 +21,55 @@ function recupMontantImposition(montant){
     const minTr5 = 168995;
     
     
-    
-    if (montant <= maxTr1){
-        return result = montant*tranche1;
-    }
-    else if (montant >= minTr2 && montant <= maxTr2){
-        return result2 = (montant - minTr2) * tranche2;
-    }
-    else if (montant >= minTr3 && montant <= maxTr3){
+   
+/*
+ * Revenu tranche5
+ */ 
+    if (revenu => minTr5){
+        result1 = (revenu - minTr5) * tranche5;
+        result2 = (maxTr4 - minTr4) * tranche4;
+        result3 = (maxTr3 - minTr3) * tranche3;
+        result4 = (maxTr2 - minTr2) * tranche2;
+        resulatfinal5 = result1 + result2 + result3 + result4;
         
+/*
+ * Revenu tranche4
+ */ 
+        if(revenu < minTr5 && revenu >= minTr4){
+            result2 = (revenu - minTr4) * tranche4;
+            result3 = (maxTr3 - minTr3) * tranche3;
+            result4 = (maxTr2 - minTr2) * tranche2;
+            resulatfinal5 = result2 + result3 + result4;
+            
+/*
+ * Revenu tranche3
+ */ 
+            
+            if(revenu < minTr4 && revenu >= minTr3){
+                result3 = (revenu - minTr3) * tranche3;
+                result4 = (maxTr2 - minTr2) * tranche2;
+                resulatfinal5 = result3 + result4;
+                
+/*
+ * Revenu tranche2
+ */ 
+                
+                if(revenu < minTr3 && revenu >= minTr2){
+                    result1 = (revenu - minTr2) * tranche2;
+                    
+                    
+/*
+ * Revenu tranche1
+ */ 
+                    
+                    if(revenu <= maxTr1){
+                        resultfinal = revenu;
+                    }    
+                }
+               
+            }
+            
+        }
     }
    
 }
