@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Simulateur impositions</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script defer src="js/impots.js"></script>
+    </head>
+    <body>
+        <section id="contact">
+            <h1>Simulateur impositions</h1>
+            <form name="form_contact" id="form_contact" action="http://gil83.fr/nolark/testforms.php" method="POST"> 
+                <fieldset id="coordo">
+                    <legend>Calcul impositions</legend>
+                    <div>
+                        <label for="i_revenu">Votre revenu annuel :</label>
+                        <input type="number" name="i_revenu" id="i_revenu" required>
+                        <abbr data-tip="Veuillez renseigner ce champ"></abbr>
+                    </div>
+                </fieldset>
+            </form>
+            <div id="revenu"> </div>
+
+        </section>
+    </body>
+</html>
